@@ -28,9 +28,7 @@ def cortar(numero, digitos):
     decimal = str_num.split('.')[1]
     entera = str_num.split('.')[0]
     
-    print(numero / 10 ** len(list(entera)))
-    print(redondear(numero / 10 ** len(list(entera)), 7))
-    num_redondeado = redondear(numero / 10 ** len(list(entera)), 7) * 10 ** len(list(entera))
+    num_redondeado = redondear(numero / 10 ** len(list(entera)), digitos) * 10 ** len(list(entera))
     return num_redondeado
 
 assert 0.5 == redondear(0.54, 1)
